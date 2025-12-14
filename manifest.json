@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "ZV Downloader",
+  "version": "1.0",
+  "description": "Herramienta de descarga creada por https://ZonaVirtual.Club, diseñada y construida por Centurion Carlos Ezequiel",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "windows",
+    "scripting",
+    "downloads",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://zona-virtual-cloud-backend.carlos-mdtz9.workers.dev/"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["success/index.html", "success/success.js", "maintenance/index.html", "popup.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
