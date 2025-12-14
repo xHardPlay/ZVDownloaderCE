@@ -19,7 +19,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["success/index.html", "success/success.js", "maintenance/index.html", "popup.js"],
+      "resources": ["success/index.html", "success/success.js", "success/tabs.js", "success/pageAnalyzer.js", "success/displayManager.js", "success/downloader.js", "success/utils.js", "success/siteInfo.js", "maintenance/index.html", "popup.js"],
       "matches": ["<all_urls>"]
     }
   ]

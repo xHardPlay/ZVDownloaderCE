@@ -117,12 +117,26 @@
             padding: 40px;
             opacity: 0.7;
         }
+        .refresh-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        .refresh-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>ZV Downloader</h1>
         <p>Visor de Contenido en Tiempo Real</p>
+        <button id="refresh-btn" class="refresh-btn">Reescanear</button>
     </div>
 
     <div class="container">
@@ -132,15 +146,23 @@
         </div>
 
         <div class="tabs">
-            <button class="tab active" data-tab="videos">Videos</button>
+            <button class="tab active" data-tab="info">Información</button>
+            <button class="tab" data-tab="videos">Videos</button>
             <button class="tab" data-tab="audios">Audios</button>
             <button class="tab" data-tab="images">Imágenes</button>
             <button class="tab" data-tab="logos">Logos</button>
             <button class="tab" data-tab="fonts">Fuentes</button>
             <button class="tab" data-tab="texts">Textos</button>
+            <button class="tab" data-tab="files">Archivos</button>
         </div>
 
-        <div id="videos" class="tab-content active">
+        <div id="info" class="tab-content active">
+            <div class="content-list" id="info-list">
+                <div class="loading">Cargando información...</div>
+            </div>
+        </div>
+
+        <div id="videos" class="tab-content">
             <div class="content-list" id="videos-list">
                 <div class="loading">Cargando videos...</div>
             </div>
@@ -175,8 +197,14 @@
                 <div class="loading">Cargando textos...</div>
             </div>
         </div>
+
+        <div id="files" class="tab-content">
+            <div class="content-list" id="files-list">
+                <div class="loading">Cargando archivos...</div>
+            </div>
+        </div>
     </div>
 
-    <script src="success.js"></script>
+    <script type="module" src="success.js"></script>
 </body>
 </html>
